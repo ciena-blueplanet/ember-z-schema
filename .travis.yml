@@ -1,35 +1,60 @@
----
 language: node_js
-node_js:
-  - "0.12"
-
 sudo: false
-
-cache:
-  directories:
-    - node_modules
-
+node_js:
+- '5.0'
+- 'stable'
+branches:
+  except:
+  - /^v[0-9\.]+/
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
 env:
+  matrix:
   - EMBER_TRY_SCENARIO=default
-  - EMBER_TRY_SCENARIO=ember-1.13
   - EMBER_TRY_SCENARIO=ember-release
   - EMBER_TRY_SCENARIO=ember-beta
   - EMBER_TRY_SCENARIO=ember-canary
-
+  global:
+    - CXX=g++-4.8
+    - secure: bkGSwjWln/rZ2f2AV3vkuaXzGcQRIPp5IH9YM3Wc6/MHlkqdJLLS+Ielpq0V/y4SY6EKwnLF5/hYTtJhHA6XlwIQcW4Sayzpa0BgLb+NFGbsABzVvFMTFp7jSjBX3BHrI+U6Y10PCtxhOhBY4wPhh7BEpl0vevo998tTjY1q7xzKJ1nB9D9o0ClUqtkAgreZxSEEIJ7Rxlc3utMj+YI/jnjDoNGI0X4A9pnArKSmlXvPnm9dKTVs+Sd4OIuJXjFCi1iC82VMlCv+pDtFhVv22kW3Jci5kZNGEls3RR4yBCSsV34mz5C85w89vCVfLvwOD7C2GZUbpl8g5o41+6qTy/5ouQxoYwdU1kibJcvKK6xg4SGJsTHVWak37Gws0k5XBrNGO1dzSHivyaQni6gpKjjifBF6lMW6lpUXRqwBE4WUN/z1y4Eeh2WInh/kAQ6sM/t57BnurTRvF9y8KgCqzRO9EvGm6+V6sEDpyvTWPD6sgkxQYcHcsZzeAuCA7ebEXlVvC7KTLOtdUcionVlgrpcMwdAHyfEM3mGl3FqRryFKeueVTqwjqoiFLcFmrI+Ovu6E7Yd+qdDrC5mlk+hiLMskeFkQSpxVzG9PhuBJYffcHS8jE0Rw05139ZsMkGTMf3KldBEu20+ezsc+7f4oRg+fT5lrXB3+vuIQP7v8OrU=
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
-
+  - env: EMBER_TRY_SCENARIO=ember-beta
+  - env: EMBER_TRY_SCENARIO=ember-canary
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- npm config set spin false
+- npm install -g coveralls pr-bumper
+- pr-bumper check
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install
+- bower install
+before_script:
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
+- sleep 3 # give xvfb some time to start
 script:
-  - ember try $EMBER_TRY_SCENARIO test
+- npm run lint
+- ember try:one $EMBER_TRY_SCENARIO --- ember test
+after_success:
+- .travis/publish-coverage.sh
+before_deploy:
+- pr-bumper bump
+deploy:
+  provider: npm
+  email: npm.ciena@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: LO/jJgO2zmU3YMN5hNHOq8wmoz6wuwiBr60v4kHFw+X1TFl3OCwlzjFlqOb1rqkplsu9RWXdzQrs78l6MavJbWw28jjTDwGIxeq56FSno8EdwfN0MtkqXNWSA9FcduVvC16l7wj4Hel5wucV5vOGt4P+X3zxGukjG13iqCY+TQ5uBvwXz/FL8U47ZaoWGep2KXd2D6fbw/Rrjlb39s+G8bPKIG7PrHQOiL/KCZRzr3sAM5vsFibb2L6DS8v5xKV2Lo+pDhE59UqG2Oq+OOQDO3gqoxgvmq+Ty8+Kr5fJI2Q7QbKnRM3xAMq+JK9DAUxt4vpDrC3/D2LNSZ7OGXX+QTGur5hgeKLADBUjcnDX3ywoyZjAWGKF5/IsTdoLDQEwX8ojq0rR9rLPYGwNyJQibdE0vBea5JPDalrxYNaQnxO8+poM6sKziZPmllqXMlGKolQ5mniomAuJ6lUtKyeeK34AQXn6rGZxwG/6f+6mfuVJIk9hMC6h4N68rc16grIefnruDhONAYgPSmcYW9appGegH1MLKNBbXnDPExOD/exNXmfgFgFrbY2wvxB7ozM66LC0LUZECkiTllevU1L+PjGRbvTLYkS/oJq5OeQOX8HzhBeI8MD6TJ3N/sgwLGklSJL+Z8ReGrAmayrj1zGG7awjkf1VUrot83tLMW4SWrg=
+  on:
+    branch: master
+    condition: "$EMBER_TRY_SCENARIO = 'default'"
+    node: 'stable'
+    tags: false
+notifications:
+  slack:
+    secure: U+rXSCZH9TVOnYZam2WHr7ErECjuHDJsunfwArB1CLdcKzF+eBL3ceWlm2oij1e99DkgVe1cpJr3nn72LovHuyyg5iy9lCNoOt29P7qd2E6fFscT9eBatvmCztyw+1x5EEDz6NXD2d01tGtnKoM58anGbomPA0YqjUf3QHJWZko3CipZ3y0mrEz/M7yonqB08x2ZIrDyH45MZulcYG/dT75HQFenZBVXhvcH4BOSoHT8dAMankV4Ntz5KtUfVmeZcgRKoHhJzXeLwwkrRB/aOkR4qtRCmCOqwXEFJpJKbqlO6UKMFxf48AbNmt2xCDtGPE5YAH4syvN0AqnycoXoJPM8G3BwqwKLLaIl+wi/lma8gmBh6pKVlhGcTIqg/9u7hAXVualXCuaoapv7W0ucMnbnIKrJCK+dNFxHFnZdm03eK+orbOihqJ+1Hno9ErFyBvIF223bPJewQsCWYM5DDnj+Mcq6HXcgxN7S9h+9XYO80bB+/nE7Tin+piWvltAo3zts5c1pHRDTm9yTicnB5H0cORsxVHTZNcEMpuVlF0212PhlwOYAvthK8vKbOkn4AbIH0MNGQz/Ovp3YpStwbyTpW0SLu4rfItRuP66iFNvA2T9jKuwH5fSHJyLxBRyI3knRIjWAoOwoRHaUT0a+7F6+2o1r0t8uKzsgoz419qc=
