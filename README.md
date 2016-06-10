@@ -10,7 +10,7 @@ ember install ember-z-schema
 
 ## Usage
 
-```bash
+```js
 import ZSchema from 'z-schema'
 ```
 
