@@ -1,3 +1,2 @@
-import zSchema from './ZSchema-browser'
-
-export default zSchema
+import ZSchema from './ZSchema'
+export default ZSchema
