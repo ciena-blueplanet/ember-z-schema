@@ -1,9 +1,15 @@
 module.exports = {
   afterInstall: function () {
     return this.addPackagesToProject([
-      {name: 'validator', target: '5.4.0'},
       {name: 'z-schema', target: '3.17.0'}
     ])
+      .then(() => {
+        return this.addAddonsToProject({
+          packages: [
+            {name: 'ember-validator-shim', target: '>=0.1.3 <2.0.0'}
+          ]
+        })
+      })
   },
 
   normalizeEntityName: function () {
