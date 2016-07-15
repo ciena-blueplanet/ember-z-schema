@@ -1,3 +1,8 @@
+# 0.1.2
+
+* **Fixed** `lodash` imports within `z-schema` code.
+
+
 # 0.1.1
 
 * **Fixed** build.
