@@ -73,8 +73,8 @@ module.exports = {
         },
         // Replace things like "require('lodash.get')" with "require('lodash').get"
         {
-          match: /require\(("|')lodash\.([^"']+)("|')\)/g,
-          replacement: 'require($1lodash$3).$2'
+          match: /var ([^=]+)\s*=\s*require\(("|')lodash\.([^"']+)("|')\)/g,
+          replacement: 'var _ = require($2lodash$4);\nvar $1 = _.$3'
         },
         {
           match: /require\(("|')([^"']+)\.json("|')\)/g,
