@@ -1,3 +1,9 @@
+# 0.2.0
+
+* **Changed** from `ember-lodash` to `ember-lodash-shim` to switch from `lodash` 3.x to 4.x.
+
+
+
 # 0.1.3
 
 * **Fixed** tests so they will pass linting in PR #4.
