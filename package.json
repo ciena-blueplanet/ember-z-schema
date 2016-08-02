@@ -48,7 +48,7 @@
     "loader.js": "^4.0.1",
     "lodash-es": "4.14.1",
     "remark-cli": "^1.0.0",
-    "remark-lint": "^4.0.0",
+    "remark-lint": "^4.1.0",
     "validator": "5.5.0",
     "z-schema": "3.17.0"
   },
