@@ -1,3 +1,9 @@
+# 0.2.7
+
+* **Fixed** bug where `process` was undefined by replacing `process.nextTick` with `Ember.run.later`.
+
+
+
 # 0.2.6
 No CHANGELOG section found in Pull Request description.
 Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
