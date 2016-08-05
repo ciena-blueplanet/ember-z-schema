@@ -107,6 +107,10 @@ module.exports = {
         {
           match: /exports\.([a-zA-Z0-9]+) = function \(/g,
           replacement: 'exports.$1 = function $1 ('
+        },
+        {
+          match: /process\.nextTick/g,
+          replacement: 'Ember.run.next'
         }
       ]
     })
