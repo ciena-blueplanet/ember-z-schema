@@ -46,7 +46,7 @@
     "eslint": "^3.2.2",
     "eslint-config-frost-standard": "^3.0.0",
     "loader.js": "^4.0.11",
-    "lodash-es": "4.15.0",
+    "lodash-es": "4.16.2",
     "remark-cli": "^1.0.0",
     "remark-lint": "^4.2.0",
     "validator": "5.5.0",
