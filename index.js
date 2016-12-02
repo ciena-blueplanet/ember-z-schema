@@ -78,7 +78,7 @@ module.exports = {
         },
         {
           match: /isequal/g,
-          replacement: '= isEqual'
+          replacement: 'isEqual'
         },
         {
           match: /require\(("|')([^"']+)\.json("|')\)/g,
