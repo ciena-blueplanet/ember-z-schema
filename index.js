@@ -77,8 +77,8 @@ module.exports = {
           replacement: 'var _ = require($2lodash$4);\nvar $1 = _.$3'
         },
         {
-          match: /= _\.isequal/g,
-          replacement: '= _.isEqual'
+          match: /isequal/g,
+          replacement: '= isEqual'
         },
         {
           match: /require\(("|')([^"']+)\.json("|')\)/g,
