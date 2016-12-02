@@ -1,7 +1,7 @@
 module.exports = {
   afterInstall: function () {
     return this.addPackagesToProject([
-      {name: 'z-schema', target: '3.17.0'}
+      {name: 'z-schema', target: '3.18.1'}
     ])
       .then(() => {
         return this.addAddonsToProject({
