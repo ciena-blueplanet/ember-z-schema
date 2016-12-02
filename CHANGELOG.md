@@ -1,3 +1,8 @@
+# 1.0.3
+
+* **Fixed** build.
+
+
 # 1.0.2
 
 * **Fixed** shim to work with `z-schema` version `3.18.1` and updated blueprint to install that version.
