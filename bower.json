@@ -3,6 +3,6 @@
   "dependencies": {
     "ember": "^2.2.0",
     "ember-cli-shims": "0.1.1",
-    "ember-mocha": "0.8.11"
+    "ember-mocha-adapter": "~0.3.1"
   }
 }
