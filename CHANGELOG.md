@@ -1,3 +1,9 @@
+# 2.0.0
+
+* **Upgraded** to latest `z-schema` and `ember-validator-shim`/`validator`.
+
+
+
 # 1.0.3
 
 * **Fixed** build.
