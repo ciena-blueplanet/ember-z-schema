@@ -75,5 +75,13 @@
       "ember-lodash-shim"
     ],
     "configPath": "tests/dummy/config"
+  },
+  "ember-lodash-shim": {
+    "includes": [
+      "get",
+      "isEqual"
+    ],
+    "includeLodash3Exports": false,
+    "whitelist": true
   }
 }
