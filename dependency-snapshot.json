@@ -1,6 +1,6 @@
 {
   "name": "ember-z-schema",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "dependencies": {
     "5to6-codemod": {
       "version": "1.1.3",
@@ -1049,6 +1049,26 @@
         }
       }
     },
+    "broccoli-file-creator": {
+      "version": "1.1.1",
+      "from": "broccoli-file-creator@>=1.1.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/broccoli-file-creator/-/broccoli-file-creator-1.1.1.tgz",
+      "dev": true,
+      "dependencies": {
+        "broccoli-kitchen-sink-helpers": {
+          "version": "0.2.9",
+          "from": "broccoli-kitchen-sink-helpers@>=0.2.0 <0.3.0",
+          "resolved": "https://registry.npmjs.org/broccoli-kitchen-sink-helpers/-/broccoli-kitchen-sink-helpers-0.2.9.tgz",
+          "dev": true
+        },
+        "rsvp": {
+          "version": "3.0.21",
+          "from": "rsvp@>=3.0.6 <3.1.0",
+          "resolved": "https://registry.npmjs.org/rsvp/-/rsvp-3.0.21.tgz",
+          "dev": true
+        }
+      }
+    },
     "broccoli-filter": {
       "version": "1.2.4",
       "from": "broccoli-filter@>=1.2.3 <2.0.0",
@@ -1223,6 +1243,12 @@
           "dev": true
         }
       }
+    },
+    "broccoli-writer": {
+      "version": "0.1.1",
+      "from": "broccoli-writer@>=0.1.1 <0.2.0",
+      "resolved": "https://registry.npmjs.org/broccoli-writer/-/broccoli-writer-0.1.1.tgz",
+      "dev": true
     },
     "browser-resolve": {
       "version": "1.11.2",
@@ -2108,9 +2134,9 @@
       "dev": true
     },
     "ember-lodash-shim": {
-      "version": "1.1.1",
-      "from": "ember-lodash-shim@>=1.1.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/ember-lodash-shim/-/ember-lodash-shim-1.1.1.tgz",
+      "version": "1.2.0",
+      "from": "ember-lodash-shim@>=1.2.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/ember-lodash-shim/-/ember-lodash-shim-1.2.0.tgz",
       "dev": true
     },
     "ember-mocha": {
