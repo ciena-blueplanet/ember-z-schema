@@ -8,9 +8,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint": "npm run lint-js && npm run lint-md",
-    "lint-js": "eslint *.js addon app blueprints config tests",
-    "lint-md": "remark *.md",
+    "lint": "lint-all-the-things",
     "start": "ember server",
     "test": "npm run lint && ember test"
   },
@@ -43,14 +41,10 @@
     "ember-load-initializers": "0.6.3",
     "ember-lodash-shim": "^1.2.0",
     "ember-resolver": "^2.1.1",
-    "ember-test-utils": "^1.8.0",
+    "ember-test-utils": "^1.10.3",
     "ember-validator-shim": "^2.1.2",
-    "eslint": "^3.14.0",
-    "eslint-config-frost-standard": "^5.3.2",
     "loader.js": "^4.1.0",
     "lodash-es": "^4.17.4",
-    "remark-cli": "^2.1.0",
-    "remark-lint": "^5.4.0",
     "validator": "6.2.1",
     "z-schema": "3.18.2"
   },
