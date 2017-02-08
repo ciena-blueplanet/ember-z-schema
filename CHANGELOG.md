@@ -1,3 +1,8 @@
+# 2.2.2
+
+* **Updated** linting to use linting tools from `ember-test-utils`.
+
+
 # 2.2.1
 
 * **Updated** CI to test in Chrome as well as Firefox.
