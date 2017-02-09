@@ -70,7 +70,7 @@ deploy:
     branch: master
     condition: "$EMBER_TRY_SCENARIO = 'default'"
     node: 'stable'
-    tags: false
+    tags: true
 notifications:
   slack:
     secure: U+rXSCZH9TVOnYZam2WHr7ErECjuHDJsunfwArB1CLdcKzF+eBL3ceWlm2oij1e99DkgVe1cpJr3nn72LovHuyyg5iy9lCNoOt29P7qd2E6fFscT9eBatvmCztyw+1x5EEDz6NXD2d01tGtnKoM58anGbomPA0YqjUf3QHJWZko3CipZ3y0mrEz/M7yonqB08x2ZIrDyH45MZulcYG/dT75HQFenZBVXhvcH4BOSoHT8dAMankV4Ntz5KtUfVmeZcgRKoHhJzXeLwwkrRB/aOkR4qtRCmCOqwXEFJpJKbqlO6UKMFxf48AbNmt2xCDtGPE5YAH4syvN0AqnycoXoJPM8G3BwqwKLLaIl+wi/lma8gmBh6pKVlhGcTIqg/9u7hAXVualXCuaoapv7W0ucMnbnIKrJCK+dNFxHFnZdm03eK+orbOihqJ+1Hno9ErFyBvIF223bPJewQsCWYM5DDnj+Mcq6HXcgxN7S9h+9XYO80bB+/nE7Tin+piWvltAo3zts5c1pHRDTm9yTicnB5H0cORsxVHTZNcEMpuVlF0212PhlwOYAvthK8vKbOkn4AbIH0MNGQz/Ovp3YpStwbyTpW0SLu4rfItRuP66iFNvA2T9jKuwH5fSHJyLxBRyI3knRIjWAoOwoRHaUT0a+7F6+2o1r0t8uKzsgoz419qc=
