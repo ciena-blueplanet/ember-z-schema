@@ -1,3 +1,7 @@
+# 2.2.3
+
+* **Fixed** build so it'll publish.
+
 # 2.2.2
 
 * **Updated** linting to use linting tools from `ember-test-utils`.
