@@ -35,17 +35,19 @@
     "ember-cli-htmlbars-inline-precompile": "0.3.6",
     "ember-cli-inject-live-reload": "^1.6.1",
     "ember-cli-mocha": "0.13.2",
+    "ember-cli-release": "^1.0.0-beta.2",
+    "ember-cli-shims": "^1.0.2",
     "ember-cli-test-loader": "^1.1.1",
     "ember-cli-uglify": "^1.2.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.1.1",
     "ember-load-initializers": "0.6.3",
-    "ember-lodash-shim": "^1.2.0",
+    "ember-lodash-shim": "^2.0.0",
     "ember-resolver": "^2.1.1",
+    "ember-source": "^2.11.2",
     "ember-test-utils": "^1.10.3",
     "ember-validator-shim": "^2.1.2",
     "loader.js": "^4.1.0",
-    "lodash-es": "^4.17.4",
     "validator": "6.2.1",
     "z-schema": "3.18.2"
   },
@@ -71,13 +73,5 @@
       "ember-lodash-shim"
     ],
     "configPath": "tests/dummy/config"
-  },
-  "ember-lodash-shim": {
-    "includes": [
-      "get",
-      "isEqual"
-    ],
-    "includeLodash3Exports": false,
-    "whitelist": true
   }
 }
