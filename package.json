@@ -1,6 +1,6 @@
 {
   "name": "ember-z-schema",
-  "version": "2.2.3",
+  "version": "2.3.0",
   "description": "JSON Schema validator for Ember apps",
   "directories": {
     "doc": "doc",
