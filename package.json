@@ -48,7 +48,6 @@
     "ember-test-utils": "^1.10.3",
     "ember-validator-shim": "^2.1.2",
     "loader.js": "^4.1.0",
-    "lodash-es": "^4.17.4",
     "validator": "6.2.1",
     "z-schema": "3.18.2"
   },
