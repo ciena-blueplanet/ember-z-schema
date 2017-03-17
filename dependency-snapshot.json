@@ -1,11 +1,11 @@
 {
   "name": "ember-z-schema",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "dependencies": {
     "5to6-codemod": {
-      "version": "1.1.4",
-      "from": "5to6-codemod@>=1.1.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/5to6-codemod/-/5to6-codemod-1.1.4.tgz"
+      "version": "1.4.0",
+      "from": "5to6-codemod@1.4.0",
+      "resolved": "https://registry.npmjs.org/5to6-codemod/-/5to6-codemod-1.4.0.tgz"
     },
     "abbrev": {
       "version": "1.0.9",
