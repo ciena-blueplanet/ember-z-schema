@@ -1,2 +1,2 @@
-import ZSchema from './ZSchema'
+/* global ZSchema */
 export default ZSchema
