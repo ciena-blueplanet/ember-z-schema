@@ -1,3 +1,7 @@
+# 2.4.1 (2017-05-11)
+* **Added** `pr-bumper.json` file to fix publishing
+
+
 # 2.4.0 (2017-03-22)
 
 * **Changed** shim to supply *z-schema* via vendor to get smaller builds.
