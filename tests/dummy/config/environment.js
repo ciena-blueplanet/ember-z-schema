@@ -1,11 +1,15 @@
+/* eslint-env node */
 module.exports = function (environment) {
   var ENV = {
     APP: {},
-    rootURL: '/',
     EmberENV: {
-      FEATURES: {}
+      FEATURES: {},
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
+      }
     },
-    environment: environment,
+    environment: environme
     locationType: 'hash',
     modulePrefix: 'dummy'
   }
