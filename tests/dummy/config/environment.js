@@ -9,7 +9,7 @@ module.exports = function (environment) {
         Date: false
       }
     },
-    environment: environme
+    environment: environment,
     locationType: 'hash',
     modulePrefix: 'dummy'
   }
