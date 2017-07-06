@@ -2,6 +2,7 @@
 module.exports = function (environment) {
   var ENV = {
     APP: {},
+    rootURL: '/',
     EmberENV: {
       FEATURES: {},
       EXTEND_PROTOTYPES: {
