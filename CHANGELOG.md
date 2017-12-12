@@ -1,3 +1,6 @@
+# 2.4.3 (2017-12-12)
+* **Updated** super call inside of `included` hook of `index.js` to bind the context to `this`
+
 # 2.4.2 (2017-07-07)
 
 Upgrade ember-cli to 2.12.3
