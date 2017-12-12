@@ -4,8 +4,8 @@
 module.exports = {
   name: 'z-schema',
 
-  included (parent) {
-    this._super.included(parent)
+  included () {
+    this._super.included.apply(this, arguments)
 
     this.import({
       development: 'vendor/z-schema/z-schema.js',
