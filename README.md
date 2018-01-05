@@ -2,6 +2,8 @@
 
 [![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url] ![Ember][ember-img]
 
+This addon provides an Ember shim for version `3.18.2` of the [z-schema](https://github.com/zaggino/z-schema) package.
+
 ## Installation
 
 ```bash
