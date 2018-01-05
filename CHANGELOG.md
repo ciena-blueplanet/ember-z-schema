@@ -1,3 +1,15 @@
+# 3.0.0 (2018-01-05)
+
+* Remove useLintTree from ember-cli-mocha configuration
+* Remove reference to unused ember-cli-code-coverage configuration
+* Move `ember-cli-htmlbars` NPM dependency to devDependency
+* Pin `ember-cli-htmlbars-inline-precompile` NPM devDependency to `0.3.12`
+* Update `ember-lodash-shim` to `^2.0.7`
+* Upgrade `ember-validator-shim` to `^3.0.0`
+* Install `ember-frost-test` @ `^4.0.0`
+* Add information in README about which version of z-schema is provided
+* gitignore _package-lock.json_ until officially support Node 8
+
 # 2.4.3 (2017-12-12)
 * **Updated** super call inside of `included` hook of `index.js` to bind the context to `this`
 
