@@ -3,7 +3,7 @@ import {beforeEach, describe, it} from 'mocha'
 import ZSchema from 'z-schema'
 
 describe('z-schema', function () {
-  it('is a single module that has been exported', function () {
+  it('should be a single module that has been exported', function () {
     expect(typeof ZSchema).to.equal('function')
   })
 
@@ -13,7 +13,7 @@ describe('z-schema', function () {
     'setSchemaReader'
   ]
     .forEach((key) => {
-      it(`has ${key} method`, function () {
+      it(`should have ${key} method`, function () {
         expect(typeof ZSchema[key]).to.equal('function')
       })
     })
@@ -33,7 +33,7 @@ describe('z-schema', function () {
       'validateSchema'
     ]
       .forEach((key) => {
-        it(`has ${key} method`, function () {
+        it(`should have ${key} method`, function () {
           expect(typeof validator[key]).to.equal('function')
         })
       })
