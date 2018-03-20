@@ -1,3 +1,19 @@
+# 4.0.0 (2018-03-20)
+These changes are from the previous PR which did not publish: https://github.com/ciena-blueplanet/ember-z-schema/pull/99
+* **Updated** pull request template
+* **Added** issue template
+* **Updated** to `pr-bumper` version `3`
+* **Updated** to node 8
+* **Added** slack integration
+* **Updated** `ember-frost-test` to `^4.0.1`
+* **Updated** `ember-test-utils` to `^8.1.1`
+* **Updated** `ember-lodash-shim` to `^3.0.1`
+* **Updated** `ember-validator-shim` to `^3.0.1`
+* **Removed** ignoring of `package-lock.json` file
+* **Added** `package-lock.json` file
+The change from this PR:
+* **Updated** Travis CI scripts to work with node 8
+
 # 3.0.0 (2018-01-05)
 
 * Remove useLintTree from ember-cli-mocha configuration
