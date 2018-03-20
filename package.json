@@ -61,7 +61,7 @@
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
     "ember-lodash-shim": "^3.0.1",
-    "ember-validator-shim": "^3.0.0"
+    "ember-validator-shim": "^3.0.1"
   },
   "ember-addon": {
     "after": [
