@@ -4,19 +4,19 @@ source $(npm root -g)/pr-bumper/.travis/is-bump-commit.sh
 
 if isBumpCommit
 then
-  echo "Skipping pr-bumper coverage publish step for version bump commit"
+  echo "Skipping coverage publish for version bump commit"
   exit 0
 fi
 
-if [[ ! "${PUBLISH_NODE_VERSION:-8.1.2}" =~ ^$TRAVIS_NODE_VERSION ]]
+if [ "$TRAVIS_NODE_VERSION" != "6.9.1" ]
 then
-  echo "Skipping pr-bumper coverage publish step for TRAVIS_NODE_VERSION [${TRAVIS_NODE_VERSION}]"
+  echo "Skipping coverage publish for TRAVIS_NODE_VERSION ${TRAVIS_NODE_VERSION}"
   exit 0
 fi
 
 if [ "$EMBER_TRY_SCENARIO" != "ember-default" ]
 then
-  echo "Skipping pr-bumper coverage publish step for EMBER_TRY_SCENARIO [${EMBER_TRY_SCENARIO}]"
+  echo "Skipping coverage publish for EMBER_TRY_SCENARIO ${EMBER_TRY_SCENARIO}"
   exit 0
 fi
 
