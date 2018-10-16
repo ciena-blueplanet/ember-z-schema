@@ -1,3 +1,8 @@
+# 5.0.1 (2018-10-16)
+* Removed ember-frost-test
+* Updated lodash-shim and validator-shim
+
+
 # 5.0.0 (2018-10-16)
 * Update ember-cli-babel to 6.6.0
 * Update other dependencies to remove deprecations
