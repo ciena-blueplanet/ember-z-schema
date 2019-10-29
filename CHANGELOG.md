@@ -1,3 +1,8 @@
+# 5.0.2 (2019-10-29)
+* Removed ember-frost-test
+* Updated lodash-shim and validator-shim
+
+
 # 5.0.1 (2018-10-16)
 * Removed ember-frost-test
 * Updated lodash-shim and validator-shim
